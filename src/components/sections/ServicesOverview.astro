@@ -1,0 +1,43 @@
+---
+const services = [
+  {
+    title: "Renovation",
+    description: "Complete home renovation services tailored to your needs and vision.",
+    icon: "🏠"
+  },
+  {
+    title: "Remodeling",
+    description: "Kitchen, bathroom, and room-specific remodeling with expert craftsmanship.",
+    icon: "🔨"
+  },
+  {
+    title: "Painting",
+    description: "Interior and exterior painting services with premium materials.",
+    icon: "🎨"
+  },
+  {
+    title: "Tiling",
+    description: "Professional tiling services for floors, walls, and custom designs.",
+    icon: "🔲"
+  }
+];
+---
+
+<section class="py-20 bg-gray-50">
+  <div class="container mx-auto px-4">
+    <div class="text-center mb-12">
+      <h2 class="text-4xl font-bold mb-4">Our Services</h2>
+      <p class="text-xl text-gray-600">Comprehensive construction and renovation solutions</p>
+    </div>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      {services.map(service => (
+        <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+          <div class="text-4xl mb-4">{service.icon}</div>
+          <h3 class="text-xl font-semibold mb-2">{service.title}</h3>
+          <p class="text-gray-600">{service.description}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

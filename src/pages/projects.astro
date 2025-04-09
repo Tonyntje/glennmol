@@ -1,0 +1,59 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ProjectGallery from '../components/projects/ProjectGallery';
+import { projects } from '../data/projects';
+
+const categories = ['All', ...new Set(projects.map(project => project.category))];
+---
+
+<Layout title="Our Projects">
+  <div class="container mx-auto px-4 py-12">
+    <div class="text-center mb-12">
+      <h1 class="text-4xl font-bold mb-4">Our Projects</h1>
+      <p class="text-xl text-gray-600">Explore our portfolio of completed projects</p>
+    </div>
+
+    <div class="flex justify-center gap-4 mb-12" id="category-filters">
+      {categories.map(category => (
+        <button
+          data-category={category}
+          class:list={[
+            'px-6 py-2 rounded-full transition-colors',
+            'hover:bg-primary hover:text-white',
+            category === 'All' ? 'bg-primary text-white' : 'bg-gray-100 text-gray-700'
+          ]}
+        >
+          {category}
+        </button>
+      ))}
+    </div>
+
+    <ProjectGallery client:load projects={projects} selectedCategory="All" />
+  </div>
+</Layout>
+
+<script>
+  let selectedCategory = 'All';
+  const gallery = document.querySelector('astro-island');
+  const buttons = document.querySelectorAll('#category-filters button');
+
+  buttons.forEach(button => {
+    button.addEventListener('click', () => {
+      const category = button.getAttribute('data-category') || 'All';
+      
+      // Update button styles
+      buttons.forEach(btn => {
+        btn.classList.remove('bg-primary', 'text-white');
+        btn.classList.add('bg-gray-100', 'text-gray-700');
+      });
+      button.classList.remove('bg-gray-100', 'text-gray-700');
+      button.classList.add('bg-primary', 'text-white');
+
+      // Update gallery props
+      if (gallery) {
+        // @ts-ignore
+        gallery.componentInstance.props.selectedCategory = category;
+      }
+    });
+  });
+</script>
