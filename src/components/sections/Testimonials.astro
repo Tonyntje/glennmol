@@ -1,22 +1,27 @@
 ---
+import { Image } from 'astro:assets';
+import devries from '../../assets/de-vries.jpeg';
+import janine from '../../assets/janine.jpeg';
+import hovestad from '../../assets/hovestad.jpeg';
+
 const testimonials = [
   {
-    name: "John Smith",
-    role: "Homeowner",
-    content: "Exceptional work on our kitchen renovation. Professional, punctual, and exceeded our expectations.",
-    image: "/images/testimonial-1.jpg"
+    name: "Fam. De Vries",
+    role: "Utrecht",
+    content: "Vanaf het eerste gesprek hadden we er vertrouwen in. Alles werd helder uitgelegd en er werd echt geluisterd naar onze wensen. De verbouwing liep volgens planning en het resultaat is prachtig. We zouden dit bedrijf aan iedereen aanraden!",
+    image: devries
   },
   {
-    name: "Sarah Johnson",
-    role: "Business Owner",
-    content: "The team did an amazing job with our office remodel. Great attention to detail and excellent communication throughout.",
-    image: "/images/testimonial-2.jpg"
+    name: " Janine K.",
+    role: "Amersfoort",
+    content: "Ik was vooral op zoek naar een aannemer die me volledig kon ontzorgen. Dat is gelukt. Eén vast aanspreekpunt, heldere communicatie en geen verrassingen achteraf. Topservice en vakwerk!",
+    image: janine
   },
   {
-    name: "Mike Wilson",
-    role: "Property Manager",
-    content: "Reliable, skilled, and professional. They've completed multiple projects for us, always delivering quality results.",
-    image: "/images/testimonial-3.jpg"
+    name: "Bouwbedrijf Hovestad",
+    role: "Zakelijke klant",
+    content: "Voor een renovatieproject aan een van onze huurpanden hebben we samengewerkt. Ze zijn flexibel, denken mee en leveren op tijd. Betrouwbare partner voor zowel kleine als grote klussen.",
+    image: hovestad
   }
 ];
 ---
@@ -24,15 +29,15 @@ const testimonials = [
 <section class="py-20 bg-gray-50">
   <div class="container mx-auto px-4">
     <div class="text-center mb-12">
-      <h2 class="text-4xl font-bold mb-4">What Our Clients Say</h2>
-      <p class="text-xl text-gray-600">Real feedback from satisfied customers</p>
+      <h2 class="text-4xl font-bold mb-4">Wat zeggen anderen?</h2>
+      <p class="text-xl text-gray-600">Echte feedback van tevreden klanten</p>
     </div>
     
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
       {testimonials.map(testimonial => (
         <div class="bg-white p-6 rounded-lg shadow-md">
           <div class="flex items-center mb-4">
-            <div class="w-12 h-12 rounded-full bg-gray-200 mr-4"></div>
+            <Image alt={testimonial.name} src={testimonial.image} class="w-12 h-12 rounded-full bg-gray-200 mr-4"></Image>
             <div>
               <h3 class="font-semibold">{testimonial.name}</h3>
               <p class="text-gray-600 text-sm">{testimonial.role}</p>

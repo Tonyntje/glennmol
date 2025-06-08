@@ -2,91 +2,108 @@
 import Layout from '../layouts/Layout.astro';
 
 const expertise = [
-  'Kitchen Renovations',
-  'Bathroom Remodeling',
-  'Home Extensions',
-  'Custom Carpentry',
+  'Keukenrenovaties',
+  'Badkamerverbouwingen',
+  'Woninguitbreidingen',
+  'Dakwerken',
 ];
 
 const certifications = [
-  'Licensed General Contractor',
-  'Master Carpenter',
-  '15+ Years Experience',
-  'Fully Insured',
+  'Gecertificeerd Aannemer',
+  'Meesterdakdekker',
+  '20+ Jaar Ervaring',
+  'Volledig Verzekerd',
 ];
 ---
 
 <Layout title="About Me">
-  <div class="container mx-auto px-4 py-12">
-    <!-- Personal Introduction -->
-    <div class="max-w-4xl mx-auto">
-      <div class="grid md:grid-cols-2 gap-12 items-center mb-16">
-        <div>
-          <img
-            src="https://images.unsplash.com/photo-1556911220-bff31c812dba"
-            alt="James Wilson"
-            class="rounded-lg shadow-lg"
-          />
-        </div>
-        <div>
-          <h1 class="text-4xl font-bold mb-4">James Wilson</h1>
-          <p class="text-xl text-gray-600 mb-6">
-            Hi, I'm James. For over 15 years, I've been transforming homes in the Seattle area, 
-            bringing my clients' visions to life with quality craftsmanship and attention to detail.
-          </p>
-          <p class="text-gray-600 mb-6">
-            My journey in construction began in my father's workshop, where I learned the value of 
-            quality workmanship and honest service. Today, I bring those same values to every project 
-            I undertake, personally overseeing each renovation to ensure it meets my high standards.
-          </p>
-          <p class="text-gray-600">
-            I believe in building not just beautiful spaces, but lasting relationships with my clients. 
-            When you work with me, you're getting a dedicated craftsman who treats your home as if it 
-            were my own.
-          </p>
-        </div>
-      </div>
+    <div class="container mx-auto px-4 py-12">
+        <!-- Personal Introduction -->
+        <div class="max-w-4xl mx-auto">
+            <div class="grid md:grid-cols-2 gap-12 items-center mb-16">
+                <div>
+                    <img
+                            src="https://images.unsplash.com/photo-1556911220-bff31c812dba"
+                            alt="James Wilson"
+                            class="rounded-lg shadow-lg"
+                    />
+                </div>
+                <div>
+                    <h1 class="text-4xl font-bold mb-4">Glenn Jan Molennaar</h1>
+                    <p class="text-xl text-gray-600 mb-6">
+                        Mijn naam is Glenn Molenaar en ik ben al ruim 20 jaar werkzaam in de wereld van
+                        totaalverbouwingen en onderhoud. In die jaren heb ik een breed scala aan projecten gerealiseerd,
+                        van kleinschalige verbouwingen tot complete renovaties van woningen en bedrijfspanden. Wat al
+                        die opdrachten met elkaar gemeen hebben? Zorgvuldige voorbereiding, betrouwbaar vakmanschap en
+                        aandacht voor detail.
 
-      <!-- Expertise -->
-      <div class="mb-16">
-        <h2 class="text-3xl font-bold mb-8 text-center">My Expertise</h2>
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-          {expertise.map(skill => (
-            <div class="bg-white p-6 rounded-lg shadow-md text-center">
-              <p class="font-semibold text-gray-800">{skill}</p>
+                    </p>
+
+                </div>
+
+                <div class="col-span-2">
+                    <p class="text-gray-600 mb-6">
+                        Ik ben ooit begonnen als jonge vakman met een passie voor bouwen en verbeteren. Inmiddels werk
+                        ik samen met een netwerk van ervaren specialisten, en combineer ik die praktijkervaring met een
+                        duidelijke visie: renovaties en onderhoud moeten niet alleen goed uitgevoerd worden, maar ook
+                        efficiënt, helder gecommuniceerd en zonder onnodige verrassingen. Daarom ben ik voor mijn
+                        klanten het vaste aanspreekpunt tijdens het hele traject – van eerste gesprek tot oplevering.
+                    </p>
+                    <p class="text-gray-600">
+                        Mijn werkwijze is praktisch en betrokken. Ik luister naar de wensen van de klant, geef eerlijk
+                        advies en zorg dat afspraken nagekomen worden. Geen snelle praatjes, maar degelijk werk dat
+                        staat. Ik geloof dat goed bouwen begint bij goed vertrouwen – en dat verdien je door simpelweg
+                        te doen wat je belooft.
+
+                        Of het nu gaat om een moderne keukenrenovatie, een complete woningaanpassing of het onderhoud
+                        van een pand op langere termijn: ik denk graag mee over slimme oplossingen die technisch kloppen
+                        én aansluiten bij de verwachtingen van de klant.
+                    </p>
+                </div>
+
             </div>
-          ))}
-        </div>
-      </div>
 
-      <!-- Work Philosophy -->
-      <div class="bg-gray-50 p-8 rounded-lg mb-16">
-        <h2 class="text-3xl font-bold mb-6 text-center">My Work Philosophy</h2>
-        <div class="max-w-3xl mx-auto">
-          <p class="text-gray-600 mb-4">
-            "I believe that every home has a story to tell, and every renovation is an opportunity 
-            to write a new chapter. My approach is simple: listen carefully to my clients' needs, 
-            provide honest advice, and deliver exceptional craftsmanship."
-          </p>
-          <p class="text-gray-600">
-            "I take on a limited number of projects at a time to ensure each client receives my 
-            full attention and dedication. This allows me to maintain the highest standards of 
-            quality and provide the personal service that my clients deserve."
-          </p>
-        </div>
-      </div>
-
-      <!-- Certifications -->
-      <div>
-        <h2 class="text-3xl font-bold mb-8 text-center">Certifications & Experience</h2>
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-          {certifications.map(cert => (
-            <div class="bg-white p-6 rounded-lg shadow-md text-center">
-              <p class="font-semibold text-gray-800">{cert}</p>
+            <!-- Expertise -->
+            <div class="mb-16">
+                <h2 class="text-3xl font-bold mb-8 text-center">My Expertise</h2>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                  {expertise.map(skill => (
+                          <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                              <p class="font-semibold text-gray-800">{skill}</p>
+                          </div>
+                  ))}
+                </div>
             </div>
-          ))}
+
+            <!-- Work Philosophy -->
+            <div class="bg-gray-50 p-8 rounded-lg mb-16">
+                <h2 class="text-3xl font-bold mb-6 text-center">My Work Philosophy</h2>
+                <div class="max-w-3xl mx-auto">
+                    <p class="text-gray-600 mb-4">
+                        "Elk project is anders, en dat vraagt om maatwerk. Ik begin altijd met goed luisteren naar wat
+                        de klant echt nodig heeft. Geen loze beloftes, maar eerlijk advies en vakmanschap waarop je kunt
+                        bouwen."
+                    </p>
+                    <p class="text-gray-600">
+                        "Ik kies er bewust voor om aan een beperkt aantal projecten tegelijk te werken. Zo kan ik de
+                        volle aandacht geven aan elk detail en de kwaliteit leveren waar ik achter sta. Dat persoonlijke
+                        contact maakt voor mij het verschil."
+                    </p>
+
+                </div>
+            </div>
+
+            <!-- Certifications -->
+            <div>
+                <h2 class="text-3xl font-bold mb-8 text-center">Certifications & Experience</h2>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                  {certifications.map(cert => (
+                          <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                              <p class="font-semibold text-gray-800">{cert}</p>
+                          </div>
+                  ))}
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
 </Layout>
